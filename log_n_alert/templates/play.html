@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 5px;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            cursor: pointer;
+        }
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div class="board">
+        {% for i in range(9) %}
+        <form method="POST" action="{{ url_for('play', board=board, player=current_player, game_over=game_over) }}" style="margin: 0;">
+            <input type="hidden" name="position" value="{{ i }}">
+            <button type="submit" class="cell" {% if board[i] != ' ' or game_over == 'true' %}disabled{% endif %}>{{ board[i] }}</button>
+        </form>
+        {% endfor %}
+    </div>
+
+    {% if winner %}
+        <div class="message">
+            {% if winner == 'Draw' %}
+                It's a Draw!
+            {% else %}
+                Player {{ winner }} wins!
+            {% endif %}
+        </div>
+        <a href="{{ url_for('reset') }}">Play Again</a>
+    {% else %}
+        <div class="message">Current Player: {{ current_player }}</div>
+    {% endif %}
+</body>
+</html>
