@@ -1,6 +1,7 @@
 #!/bin/bash
 
-LOG_FILE="tic_tac_toe.log"
+timestamp_archive=$(date +%Y%m%d_%H%M%S)
+LOG_FILE="tic_tac_toe_$timestamp_archive.log"
 ARCHIVE_DIR="log_archive"
 RECIPIENT_EMAILS=("user1@example.com" "user2@example.com") # Add your recipient emails
 SMTP_SERVER="your_smtp_server" # Replace with your SMTP server address
@@ -56,7 +57,8 @@ done < "$LOG_FILE"
 
 # Archive the processed log file (optional - you might want to do this periodically)
 timestamp_archive=$(date +%Y%m%d_%H%M%S)
-mv "$LOG_FILE" "$ARCHIVE_DIR/tic_tac_toe_$timestamp_archive.log"
-touch "$LOG_FILE" # Create a new empty log file
+#mv "$LOG_FILE" "$ARCHIVE_DIR/tic_tac_toe_$timestamp_archive.log"
+tar -czvf "$ARCHIVE_DIR/tic_tac_toe_$timestamp_archive.tar.gz" "$LOG_FILE"
+#touch "$LOG_FILE" # Create a new empty log file
 
 echo "Log file processed, archived, and alerts sent (if configured)."
