@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import logging
+from tasks import process_logs_task
 from datetime import datetime
 
 app = Flask(__name__)
@@ -42,9 +43,11 @@ def play():
             winner = check_winner(board)
             if winner:
                 logging.info(f"Game Over - Winner: {winner}, Board: {board}")
+                process_logs_task.delay()
                 return render_template('play.html', board=board, winner=winner, current_player=current_player, game_over='true')
             elif is_board_full(board):
                 logging.info(f"Game Over - Draw, Board: {board}")
+                process_logs_task.delay()
                 return render_template('play.html', board=board, winner='Draw', current_player=current_player, game_over='true')
             else:
                 next_player = 'O' if current_player == 'X' else 'X'

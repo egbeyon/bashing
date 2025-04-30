@@ -1,0 +1,437 @@
+2025-04-30 14:05:45,137 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-30 14:05:45,137 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 14:06:01,320 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:01] "GET / HTTP/1.1" 200 -
+2025-04-30 14:06:05,042 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:05] "GET /play HTTP/1.1" 200 -
+2025-04-30 14:06:06,951 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:06] "[32mPOST /play?board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&player=X&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:06:07,235 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:07] "GET /play?board=X&board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&player=O HTTP/1.1" 200 -
+2025-04-30 14:06:09,080 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:09] "[32mPOST /play?board=X&board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&player=O&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:06:09,372 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:09] "GET /play?board=X&board=+&board=+&board=O&board=+&board=+&board=+&board=+&board=+&player=X HTTP/1.1" 200 -
+2025-04-30 14:06:10,958 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:10] "[32mPOST /play?board=X&board=+&board=+&board=O&board=+&board=+&board=+&board=+&board=+&player=X&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:06:11,201 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:11] "GET /play?board=X&board=+&board=+&board=O&board=+&board=+&board=X&board=+&board=+&player=O HTTP/1.1" 200 -
+2025-04-30 14:06:12,497 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:12] "[32mPOST /play?board=X&board=+&board=+&board=O&board=+&board=+&board=X&board=+&board=+&player=O&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:06:12,868 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:12] "GET /play?board=X&board=O&board=+&board=O&board=+&board=+&board=X&board=+&board=+&player=X HTTP/1.1" 200 -
+2025-04-30 14:06:13,777 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:13] "[32mPOST /play?board=X&board=O&board=+&board=O&board=+&board=+&board=X&board=+&board=+&player=X&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:06:13,963 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:13] "GET /play?board=X&board=O&board=+&board=O&board=X&board=+&board=X&board=+&board=+&player=O HTTP/1.1" 200 -
+2025-04-30 14:06:14,893 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:14] "[32mPOST /play?board=X&board=O&board=+&board=O&board=X&board=+&board=X&board=+&board=+&player=O&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:06:15,145 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:15] "GET /play?board=X&board=O&board=+&board=O&board=X&board=+&board=X&board=O&board=+&player=X HTTP/1.1" 200 -
+2025-04-30 14:06:15,923 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:15] "[32mPOST /play?board=X&board=O&board=+&board=O&board=X&board=+&board=X&board=O&board=+&player=X&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:06:16,146 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:16] "GET /play?board=X&board=O&board=+&board=O&board=X&board=X&board=X&board=O&board=+&player=O HTTP/1.1" 200 -
+2025-04-30 14:06:16,914 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:16] "[32mPOST /play?board=X&board=O&board=+&board=O&board=X&board=X&board=X&board=O&board=+&player=O&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:06:17,204 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:17] "GET /play?board=X&board=O&board=O&board=O&board=X&board=X&board=X&board=O&board=+&player=X HTTP/1.1" 200 -
+2025-04-30 14:06:18,034 - INFO - Game Over - Winner: X, Board: ['X', 'O', 'O', 'O', 'X', 'X', 'X', 'O', 'X']
+2025-04-30 14:06:18,713 - ERROR - Exception on /play [POST]
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+           ^^^^^^^^^^^^^^
+AttributeError: 'ChannelPromise' object has no attribute '__value__'. Did you mean: '__call__'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/virtual/base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 938, in _connection_factory
+    self._connection = self._establish_connection()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/virtual/base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/virtual/base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/redis.py", line 744, in __init__
+    self.client.ping()
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/bashing/log_n_alert/app.py", line 46, in play
+    process_logs_task.delay()
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/task.py", line 601, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/base.py", line 922, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/amqp.py", line 523, in send_task_message
+    ret = producer.publish(
+          ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 190, in publish
+    return _publish(
+           ^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 200, in _publish
+    channel = self.channel
+              ^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 224, in _get_channel
+    channel = self._channel = channel()
+                              ^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 240, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 957, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/local/python/3.12.1/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to localhost:6379. Connection refused.
+2025-04-30 14:06:18,719 - INFO - 127.0.0.1 - - [30/Apr/2025 14:06:18] "[35m[1mPOST /play?board=X&board=O&board=O&board=O&board=X&board=X&board=X&board=O&board=+&player=X&game_over=false HTTP/1.1[0m" 500 -
+2025-04-30 14:13:29,620 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-30 14:13:29,621 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 14:13:42,851 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:42] "GET / HTTP/1.1" 200 -
+2025-04-30 14:13:45,543 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:45] "GET /play HTTP/1.1" 200 -
+2025-04-30 14:13:49,661 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:49] "[32mPOST /play?board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&player=X&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:13:49,871 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:49] "GET /play?board=+&board=X&board=+&board=+&board=+&board=+&board=+&board=+&board=+&player=O HTTP/1.1" 200 -
+2025-04-30 14:13:52,556 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:52] "[32mPOST /play?board=+&board=X&board=+&board=+&board=+&board=+&board=+&board=+&board=+&player=O&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:13:52,942 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:52] "GET /play?board=+&board=X&board=+&board=O&board=+&board=+&board=+&board=+&board=+&player=X HTTP/1.1" 200 -
+2025-04-30 14:13:55,099 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:55] "[32mPOST /play?board=+&board=X&board=+&board=O&board=+&board=+&board=+&board=+&board=+&player=X&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:13:55,303 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:55] "GET /play?board=X&board=X&board=+&board=O&board=+&board=+&board=+&board=+&board=+&player=O HTTP/1.1" 200 -
+2025-04-30 14:13:56,563 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:56] "[32mPOST /play?board=X&board=X&board=+&board=O&board=+&board=+&board=+&board=+&board=+&player=O&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:13:57,666 - INFO - 127.0.0.1 - - [30/Apr/2025 14:13:57] "GET /play?board=X&board=X&board=+&board=O&board=O&board=+&board=+&board=+&board=+&player=X HTTP/1.1" 200 -
+2025-04-30 14:14:01,087 - INFO - Game Over - Winner: X, Board: ['X', 'X', 'X', 'O', 'O', ' ', ' ', ' ', ' ']
+2025-04-30 14:14:01,745 - ERROR - Exception on /play [POST]
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+           ^^^^^^^^^^^^^^
+AttributeError: 'ChannelPromise' object has no attribute '__value__'. Did you mean: '__call__'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/virtual/base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 938, in _connection_factory
+    self._connection = self._establish_connection()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/virtual/base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/virtual/base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/redis.py", line 744, in __init__
+    self.client.ping()
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/bashing/log_n_alert/app.py", line 46, in play
+    process_logs_task.delay()
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/task.py", line 601, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/base.py", line 922, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/amqp.py", line 523, in send_task_message
+    ret = producer.publish(
+          ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 190, in publish
+    return _publish(
+           ^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 200, in _publish
+    channel = self.channel
+              ^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 224, in _get_channel
+    channel = self._channel = channel()
+                              ^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 240, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 957, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/local/python/3.12.1/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to localhost:6379. Connection refused.
+2025-04-30 14:14:01,751 - INFO - 127.0.0.1 - - [30/Apr/2025 14:14:01] "[35m[1mPOST /play?board=X&board=X&board=+&board=O&board=O&board=+&board=+&board=+&board=+&player=X&game_over=false HTTP/1.1[0m" 500 -
+2025-04-30 14:20:37,280 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-30 14:20:37,280 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 14:20:49,364 - INFO - 127.0.0.1 - - [30/Apr/2025 14:20:49] "GET / HTTP/1.1" 200 -
+2025-04-30 14:21:01,337 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:01] "GET /play HTTP/1.1" 200 -
+2025-04-30 14:21:43,339 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:43] "[32mPOST /play?board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&player=X&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:21:43,546 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:43] "GET /play?board=X&board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&player=O HTTP/1.1" 200 -
+2025-04-30 14:21:45,656 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:45] "[32mPOST /play?board=X&board=+&board=+&board=+&board=+&board=+&board=+&board=+&board=+&player=O&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:21:46,063 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:46] "GET /play?board=X&board=+&board=+&board=O&board=+&board=+&board=+&board=+&board=+&player=X HTTP/1.1" 200 -
+2025-04-30 14:21:47,542 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:47] "[32mPOST /play?board=X&board=+&board=+&board=O&board=+&board=+&board=+&board=+&board=+&player=X&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:21:47,729 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:47] "GET /play?board=X&board=+&board=+&board=O&board=X&board=+&board=+&board=+&board=+&player=O HTTP/1.1" 200 -
+2025-04-30 14:21:48,700 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:48] "[32mPOST /play?board=X&board=+&board=+&board=O&board=X&board=+&board=+&board=+&board=+&player=O&game_over=false HTTP/1.1[0m" 302 -
+2025-04-30 14:21:49,219 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:49] "GET /play?board=X&board=+&board=+&board=O&board=X&board=+&board=+&board=O&board=+&player=X HTTP/1.1" 200 -
+2025-04-30 14:21:51,449 - INFO - Game Over - Winner: X, Board: ['X', ' ', ' ', 'O', 'X', ' ', ' ', 'O', 'X']
+2025-04-30 14:21:52,121 - ERROR - Exception on /play [POST]
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/utils/functional.py", line 32, in __call__
+    return self.__value__
+           ^^^^^^^^^^^^^^
+AttributeError: 'ChannelPromise' object has no attribute '__value__'. Did you mean: '__call__'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/virtual/base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/retry.py", line 62, in call_with_retry
+    return do()
+           ^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 730, in _connect
+    raise err
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 718, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 938, in _connection_factory
+    self._connection = self._establish_connection()
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/virtual/base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/virtual/base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/transport/redis.py", line 744, in __init__
+    self.client.ping()
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/commands/core.py", line 1212, in ping
+    return self.execute_command("PING", **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 1422, in get_connection
+    connection.connect()
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/redis/connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to localhost:6379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/bashing/log_n_alert/app.py", line 46, in play
+    process_logs_task.delay()
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/task.py", line 444, in delay
+    return self.apply_async(args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/task.py", line 601, in apply_async
+    return app.send_task(
+           ^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/base.py", line 922, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/celery/app/amqp.py", line 523, in send_task_message
+    ret = producer.publish(
+          ^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 190, in publish
+    return _publish(
+           ^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 556, in _ensured
+    return fun(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 200, in _publish
+    channel = self.channel
+              ^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 224, in _get_channel
+    channel = self._channel = channel()
+                              ^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/utils/functional.py", line 34, in __call__
+    value = self.__value__ = self.__contract__()
+                             ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/messaging.py", line 240, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 957, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 458, in _ensure_connection
+    with ctx():
+  File "/usr/local/python/3.12.1/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to localhost:6379. Connection refused.
+2025-04-30 14:21:52,127 - INFO - 127.0.0.1 - - [30/Apr/2025 14:21:52] "[35m[1mPOST /play?board=X&board=+&board=+&board=O&board=X&board=+&board=+&board=O&board=+&player=X&game_over=false HTTP/1.1[0m" 500 -

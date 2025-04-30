@@ -5,7 +5,7 @@ This is a tic-tac-toe game, built with flask python web framework. The data of t
 - You can play it on your browser by cloning the repo and running this on your terminal:
 ```bash
 cd bashing/log_n_alert
-pip install flask
+pip install -r requirements.txt
 flask run
 ```
 
@@ -15,3 +15,8 @@ flask run
 
 # Logs and alert
 The process_log.sh file, which can be run with `./process_log.sh`, is supposed to archive and mail the logs to specified emails (change the recipient emails), if smtp server is configured.
+
+# Run cron job
+```bash
+celery -A tasks worker -l info
+```
